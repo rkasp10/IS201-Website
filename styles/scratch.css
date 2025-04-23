@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: 'Spectral', serif;
+    background-color: #e0e0e0;
+    text-align: center;
+    color: #2c2c2c;
+}
+.hero-section, .main-content, .footer {
+    padding: 2rem;
+}
+.main-content div {
+    margin-bottom: 2rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+ol, ul {
+    text-align: left;
+    padding-left: 1.5rem;
+}
+
+iframe {
+    max-width: 100%;
+}
+.nav-bar {
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.list-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-block ol {
+    text-align: left;
+    padding-left: 1.5rem;
+}
+
+.list-block ol li {
+    margin-bottom: 1rem;
+}
+
+.list-block ol li ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}

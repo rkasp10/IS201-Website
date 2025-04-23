@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring Build Generator</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Spectral', serif;
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        #result {
+            margin-top: 2rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        a {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elden Ring Build Generator</h1>
+    <p>Click the button below to receive a random build recommendation.</p>
+    <button onclick="generateBuild()">Generate Build</button>
+    <div id="result"></div>
+
+    <a href="scratch.html">← Back to Scratch Page</a>
+
+    <script>
+        const builds = [
+    { stat: 'Strength', weapon: 'Great Club', playstyle: 'Defensive tank' },
+    { stat: 'Dexterity', weapon: 'Rivers of Blood', playstyle: 'Aggressive melee' },
+    { stat: 'Intelligence', weapon: 'Moonveil', playstyle: 'Sorcery spammer' },
+    { stat: 'Faith', weapon: 'Blasphemous Blade', playstyle: 'Faith-based caster' },
+    { stat: 'Arcane', weapon: 'Sword of Night and Flame', playstyle: 'Stealth archer' }
+];
+        function generateBuild() {
+            const build = builds[Math.floor(Math.random() * builds.length)];
+            const output = `Focus on ${build.stat}, use the ${build.weapon}, and play like a ${build.playstyle}.`;
+            document.getElementById('result').textContent = output;
+        }
+    </script>
+</body>
+</html>
